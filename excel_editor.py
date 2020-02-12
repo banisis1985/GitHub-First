@@ -17,8 +17,8 @@ for row in range(1, ws.max_row +1):
     mylist.append(ws.cell(row,stulpelis).value)
     for index in mylist:
         index = str(index)
-    if index == None:
-        continue
+        if index != datetime:
+            continue
     if index.isalpha():
         continue
     date = datetime.strptime(index, '%Y-%m-%d %H:%M:%S')
